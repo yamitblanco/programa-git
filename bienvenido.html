@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Establece el idioma del documento como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el diseño responsivo para dispositivos móviles -->
+    <meta name="description" content="Sistema de gestión de inventarios accesible y fácil de usar."> <!-- Descripción de la página -->
+    <title>Sistema de Gestión de Inventarios</title> <!-- Título que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body> <!-- Comienza el cuerpo del documento -->
+
+<nav id="mapanav_3"> <!-- Navegación principal de la página -->
+    <a href="bienvenido.html">Gestión de Inventario</a> <!-- Enlace a la sección de gestión de inventario -->
+    <a href="informes.html">Generación de Informes</a> <!-- Enlace a la sección de generación de informes -->
+    <a href="contactonoreg.html">Contacto</a> <!-- Enlace a la sección de contacto dentro de la misma página -->
+    <a href="Inicio.html">Cerrar sesión</a> <!-- Enlace para cerrar sesión -->
+</nav>
+
+<section id="manejo_inventario"> <!-- Sección dedicada a la gestión de inventario -->
+    <h2>Gestión de Inventario</h2> <!-- Título secundario de la sección -->
+    <form action="add-product.html" method="POST" aria-label="Agregar productos al inventario"> <!-- Formulario para agregar productos -->
+        
+        <label for="product-id">ID del producto:</label> <!-- Etiqueta para el campo del ID del producto -->
+        <input type="text" id="product-id" name="product-id" required> <!-- Campo de entrada para el ID del producto -->
+
+        <label for="product-name">Nombre del producto:</label> <!-- Etiqueta para el campo del nombre del producto -->
+        <input type="text" id="product-name" name="product-name" required> <!-- Campo de entrada para el nombre del producto -->
+
+        <label for="status">Estado:</label> <!-- Etiqueta para el campo del estado -->
+        <select id="status" name="status" required> <!-- Campo de selección para el estado -->
+            <option value="" disabled selected>Selecciona un estado</option> <!-- Opción predeterminada -->
+            <option value="disponible">Disponible</option> <!-- Opción para estado disponible -->
+            <option value="agotado">Agotado</option> <!-- Opción para estado agotado -->
+            <option value="en camino">En camino</option> <!-- Opción para estado en camino -->
+        </select>
+
+        <label for="location">Ubicación:</label> <!-- Etiqueta para el campo de ubicación -->
+        <input type="text" id="location" name="location" required> <!-- Campo de entrada para la ubicación -->
+
+        <label for="quantity">Cantidad:</label> <!-- Etiqueta para el campo de cantidad -->
+        <input type="number" id="quantity" name="quantity" required> <!-- Campo de entrada numérico para la cantidad -->
+
+        <label for="price">Precio:</label> <!-- Etiqueta para el campo de precio -->
+        <input type="number" id="price" name="price" step="0.01" required> <!-- Campo de entrada numérico para el precio -->
+
+        <input type="submit" value="Agregar Producto"> <!-- Botón para enviar el formulario y agregar el producto -->
+    </form> <!-- Cierre del formulario -->
+</section> <!-- Cierre de la sección de gestión de inventario -->
+
+<footer> <!-- Pie de página -->
+    <p>© 2024 Sistema de Gestión de Inventarios</p> <!-- Texto de copyright -->
+</footer>
+</body>
+</html>
